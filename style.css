@@ -1,106 +1,118 @@
-
-/* =========================
-   RESET
-========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 body {
-  font-family: "Arial", sans-serif;
+  font-family: Arial, sans-serif;
   background: #e9e9e9;
   color: #333;
   line-height: 1.6;
 }
 
 /* =========================
-   CV CONTAINER
+   CV
 ========================= */
 .cv {
   width: 900px;
   max-width: 95%;
   margin: 40px auto;
-  background: white;
+  background: #fff;
+
   display: grid;
   grid-template-columns: 280px 1fr;
+
   min-height: 1100px;
+
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 /* =========================
-   SIDEBAR
+   LEFT SIDEBAR
 ========================= */
 .sidebar {
-  background: #1f2933;
-  color: white;
-  padding: 35px 25px;
+  background: #012850;
+  color: rgb(255, 255, 255);
+  padding: 40px 28px;
 }
 
 /* =========================
-   PROFILE PHOTO
+   PROFILE
 ========================= */
 .photo-wrap {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .profile-photo {
-  width: 170px;
-  height: 170px;
+  width: 165px;
+  height: 165px;
+
   object-fit: cover;
   border-radius: 50%;
-  border: 5px solid white;
+
+  border: none;
+
   display: block;
   margin: auto;
 }
 
 /* =========================
-   SIDEBAR SECTIONS
+   LEFT SECTIONS
 ========================= */
 .side-section {
-  margin-bottom: 32px;
+  margin-bottom: 35px;
 }
 
+/* NO LINE HERE */
 .side-section h2 {
-  font-size: 17px;
+  font-size: 20px;
   letter-spacing: 2px;
-  border-bottom: 2px solid white;
-  padding-bottom: 8px;
-  margin-bottom: 15px;
-}
-
-.side-section p {
-  font-size: 14px;
   margin-bottom: 10px;
-  color: #e5e7eb;
+  color: #ffffff;
+  border: none;
 }
 
+/* Paragraph */
+.side-section p {
+  font-size: 15px;
+  color: #dfdede;
+  margin-bottom: 9px;
+}
+/* Lists */
 .side-section ul {
-  padding-left: 20px;
+  padding-left: 18px;
 }
 
 .side-section li {
   font-size: 14px;
-  margin-bottom: 8px;
-  color: #e5e7eb;
+  color: #d6d6d6;
+  margin-bottom: 12px;
+}
+
+/* Remove list marker color */
+.side-section li::marker {
+  color: #ffffff;
 }
 
 /* =========================
-   MAIN CONTENT
+   RIGHT CONTENT
 ========================= */
 .content {
-  background: #ffffff;
+  background: white;
 }
 
 /* =========================
-   HERO
+   HEADER
 ========================= */
 .hero {
-  background: #f3f4f6;
+  background: #f7f7f7;
+
   padding: 45px 45px 35px;
-  border-bottom: 5px solid #1f2933;
+
+  border-bottom: 1px solid #ddd;
 }
 
 .hero h1 {
@@ -111,16 +123,18 @@ body {
 }
 
 .hero p {
-  font-size: 16px;
+  font-size: 20px;
   letter-spacing: 2px;
   font-weight: bold;
-  color: #555;
+  color: #282727;
+  
 }
 
 /* =========================
-   CONTENT BODY
+   CONTENT
 ========================= */
 .content-body {
+ border-top: 5px solid rgb(0, 19, 130);
   padding: 35px 45px;
 }
 
@@ -132,24 +146,12 @@ body {
 }
 
 .section h2 {
-  font-size: 20px;
+  font-size: 19px;
   letter-spacing: 2px;
   color: #1f2933;
   margin-bottom: 15px;
   padding-bottom: 8px;
-  border-bottom: 2px solid #1f2933;
-  position: relative;
-}
-
-/* Small accent line */
-.section h2::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 65px;
-  height: 4px;
-  background: #555;
+  border-bottom: 4px solid #000000;
 }
 
 /* =========================
@@ -157,33 +159,44 @@ body {
 ========================= */
 .section p {
   font-size: 14px;
+
   color: #555;
+
   text-align: justify;
 }
 
 /* =========================
-   EDUCATION TIMELINE
+   EDUCATION
 ========================= */
 .timeline {
-  border-left: 3px solid #1f2933;
+  border-left: 2px solid #ddd;
+
   padding-left: 20px;
 }
 
 .timeline-item {
   position: relative;
+
   margin-bottom: 15px;
+
   font-size: 14px;
+
   color: #555;
 }
 
 .timeline-item::before {
   content: "";
+
   position: absolute;
-  left: -28px;
+
+  left: -26px;
   top: 7px;
-  width: 10px;
-  height: 10px;
-  background: #1f2933;
+
+  width: 9px;
+  height: 9px;
+
+  background: #555;
+
   border-radius: 50%;
 }
 
@@ -192,7 +205,7 @@ body {
 }
 
 /* =========================
-   LISTS
+   LISTS RIGHT SIDE
 ========================= */
 .section ul,
 .section ol {
@@ -201,32 +214,26 @@ body {
 
 .section li {
   font-size: 14px;
-  margin-bottom: 8px;
+
   color: #555;
+
+  margin-bottom: 8px;
 }
 
 .section li::marker {
-  color: #1f2933;
-  font-weight: bold;
+  color: #555;
 }
 
 /* =========================
-   HOVER EFFECT
-========================= */
-.side-section li:hover,
-.section li:hover {
-  color: #000;
-  transition: 0.2s;
-}
-
-/* =========================
-   RESPONSIVE DESIGN
+   RESPONSIVE
 ========================= */
 @media (max-width: 750px) {
 
   .cv {
     width: 95%;
+
     grid-template-columns: 1fr;
+
     margin: 20px auto;
   }
 
@@ -253,7 +260,7 @@ body {
 }
 
 /* =========================
-   SMALL MOBILE
+   MOBILE
 ========================= */
 @media (max-width: 450px) {
 
@@ -264,7 +271,9 @@ body {
   .cv {
     width: 100%;
     max-width: 100%;
+
     margin: 0;
+
     box-shadow: none;
   }
 
@@ -288,14 +297,10 @@ body {
   .content-body {
     padding: 25px 20px;
   }
-
-  .section h2 {
-    font-size: 18px;
-  }
 }
 
 /* =========================
-   PRINT / PDF
+   PRINT
 ========================= */
 @media print {
 
@@ -306,16 +311,13 @@ body {
   .cv {
     width: 100%;
     max-width: 100%;
+
     margin: 0;
+
     box-shadow: none;
   }
 
   .sidebar {
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-  }
-
-  .hero {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
